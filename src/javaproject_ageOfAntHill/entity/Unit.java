@@ -51,6 +51,7 @@ public abstract class Unit extends Entity {
 	public void moveUnit(Position finalPos, Position startingPos, InterfaceMap map, Window wind) {
 		map.getCell(finalPos).setEntity(this);
 		map.getCell(startingPos).setEntity(null);
+		
 		wind.getLabelTab(finalPos.getX(), finalPos.getY()).addEntityMap(this);
 		wind.getLabelTab(startingPos.getX(), startingPos.getY()).rmvEntityMap();
 	}

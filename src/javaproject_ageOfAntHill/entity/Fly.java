@@ -1,5 +1,7 @@
 package javaproject_ageOfAntHill.entity;
 
+import javax.swing.ImageIcon;
+
 /**
  * @author Maxime Augst, Joris Chalumeau, Nicolas Logut, Mathieu Berthet, Adrian
  *         Amaglio, Adrien Arsac
@@ -46,5 +48,6 @@ public class Fly extends Unit {
 		this.setDeplacements(DEFAULT_FLY_SPEED);
 		this.setTeam(teamNumber);
 		this.setType(FLY_TYPE);
+		//jlentity.setIcon(new ImageIcon("./img/mobs/fly/fly.png"));
 	}
 }

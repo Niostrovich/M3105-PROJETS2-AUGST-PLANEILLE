@@ -86,7 +86,7 @@ public abstract class Unit extends Entity {
 	public int getDeplacements() {
 		return deplacements;
 	}
-	/
+	
 	public void setDeplacements(int deplacements) {
 		this.deplacements = deplacements;
 	}

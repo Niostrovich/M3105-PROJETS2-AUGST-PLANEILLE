@@ -25,7 +25,7 @@ public class Save {
 			for (String elem : line.split("###")) {
 				this.grid[this.nbElem / Map.getNbColumn()][this.nbElem % Map.getNbLine()] = new Cell(
 						this.entityFromStr(elem.split("##")[0]),
-						CellState.getCellState(elem.split("##")[1]));
+						CellState.parseCellState(elem.split("##")[1]));
 			}
 		}
 	}

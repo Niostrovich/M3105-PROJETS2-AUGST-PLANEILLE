@@ -64,7 +64,7 @@ public class LabelCustom extends JPanel {
 		this.entity=entity;
 		switch (this.entity.getType()){
 		case "FLY":
-			jlentity.setIcon(new ImageIcon("./img/mobs/fly/fly.png"));
+			
 			break;
 		case "GUARD":
 			jlentity.setIcon(new ImageIcon("./img/mobs/guardian/guardian.png"));

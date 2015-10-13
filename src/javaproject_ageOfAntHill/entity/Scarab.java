@@ -47,5 +47,6 @@ public class Scarab extends Unit {
 		this.setDeplacements(DEFAULT_BEETLE_SPEED);
 		this.setTeam(teamNumber);
 		this.setType(SCARAB_TYPE);
+		this.set
 	}
 }

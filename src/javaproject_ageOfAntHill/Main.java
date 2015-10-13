@@ -10,8 +10,6 @@ import javaproject_ageOfAntHill.map.Map;
  * 
  * @author Maxime Augst, Joris Chalumeau, Nicolas Logut, Mathieu Berthet, Adrian
  *         Amaglio, Adrien Arsac
- *
- * @version 20150607
  */
 public class Main {
 	/**
@@ -19,7 +17,7 @@ public class Main {
 	 * 
 	 * @param args
 	 */
-	// To check later. Eventually insert into another class.
+	
 	public static void main(String[] args) {
 		InterfaceHM interfHM = new Interface();
 		Displaying disp = new Displaying(interfHM);

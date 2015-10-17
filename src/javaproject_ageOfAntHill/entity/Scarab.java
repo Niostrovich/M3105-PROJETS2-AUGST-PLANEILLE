@@ -1,7 +1,7 @@
 package javaproject_ageOfAntHill.entity;
 
 /**
- * The "Scarab" class which allow to use scarab entity. 
+ * The "Scarab" class which allow to use scarab entity.
  * 
  * @author Maxime Augst, Joris Chalumeau, Nicolas Logut, Mathieu Berthet, Adrian
  *         Amaglio, Adrien Arsac
@@ -9,16 +9,11 @@ package javaproject_ageOfAntHill.entity;
  */
 
 public class Scarab extends Unit {
-	
-	  
-	 
+
 	private final static int DEFAULT_BEETLE_SPEED = 2;
-	
-	 
-	 
-	
+
 	private static final int DEFAULT_HEAVY_UNIT_ARMOR = 0;
-	
+
 	private static final int DEFAULT_HEAVY_UNIT_DAMAGE = 0;
 
 	private static final int DEFAULT_HEAVY_UNIT_HP = 0;
@@ -33,6 +28,6 @@ public class Scarab extends Unit {
 		this.setDeplacements(DEFAULT_BEETLE_SPEED);
 		this.setTeam(teamNumber);
 		this.setType(SCARAB_TYPE);
-		f
+
 	}
 }

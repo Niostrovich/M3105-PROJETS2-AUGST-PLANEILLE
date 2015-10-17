@@ -1,4 +1,4 @@
-fpackage javaproject_ageOfAntHill.entity;
+package javaproject_ageOfAntHill.entity;
 
 import javaproject_ageOfAntHill.map.Position;
 

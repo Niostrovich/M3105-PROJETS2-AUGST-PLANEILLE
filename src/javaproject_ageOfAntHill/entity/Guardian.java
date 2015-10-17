@@ -23,5 +23,4 @@ public class Guardian extends Unit {
 		this.setTeam(teamNumber);
 		this.setType(GUARDIAN_TYPE);
 	}
-F
 }

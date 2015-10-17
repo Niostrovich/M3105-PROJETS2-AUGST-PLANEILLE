@@ -12,27 +12,17 @@ package javaproject_ageOfAntHill.map;
 
 public enum CellState {
 
-
 	SAND_SQUARE("S"),
-
-
 
 	GRASS_SQUARE("G"),
 
-
-
 	WATER_SQUARE("W"),
 
-
-
 	TREE_SQUARE("T");
-	
-	
+
 	private String fileName;
 
-
 	private String state;
-
 
 	private boolean unreachable;
 
@@ -44,10 +34,8 @@ public enum CellState {
 	public String getFileName() {
 		return this.fileName;
 	}
-	
 
-
-	public static CellState parseCellState(String string){
+	public static CellState parseCellState(String string) {
 		switch (string) {
 		case "S":
 			return CellState.SAND_SQUARE;
@@ -63,12 +51,10 @@ public enum CellState {
 		}
 	}
 
-	
 	private boolean unreachable() {
 		return this.unreachable;
 	}
 
-	
 	public String cellStateToString() {
 		return this.state;
 	}

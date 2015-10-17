@@ -12,7 +12,7 @@ public class Queen extends Unit {
 	private final static int DEFAULT_QUEEN_SPEED = 0;
 	private final static String QUEEN_TYPE = "QUEEN";
 
-	public Queen(int teamNumber) {
+	public Queen(int teamNumber){
 		this.setDamages(DEFAULT_PEACEFUL_UNIT_DAMAGE);
 		this.setArmor(DEFAULT_PEACEFUL_UNIT_ARMOR);
 		this.setMaxHealthPoints(DEFAULT_PEACEFUL_UNIT_HP);

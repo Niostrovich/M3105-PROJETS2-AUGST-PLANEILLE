@@ -26,8 +26,8 @@ public class Menu extends JFrame implements ActionListener {
 	private JButton buttonLoadGame;
 	private JButton buttonClose;
 	private Displaying disp;
-	private JSplitPane split1;
-	private JSplitPane split2;
+	private JSplitPane splitVertical1;
+	private JSplitPane splitVertical2;
 
 	public Menu(Displaying disp) {
 		this.disp = disp;
@@ -40,8 +40,8 @@ public class Menu extends JFrame implements ActionListener {
 		buttonClose = new JButton("", new ImageIcon(
 				"./img/overlay/BUTTON-CLOSE.png"));
 		buttonClose.setBorder(null);
-		this.split1 = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
-		this.split2 = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
+		this.splitVertical1 = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
+		this.splitVertical2 = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
 		init();
 	}
 
@@ -50,24 +50,27 @@ public class Menu extends JFrame implements ActionListener {
 		this.setSize(300, 450);
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);
-		JPanel pan1 = new JPanel();
-		JPanel pan2 = new JPanel();
-		JPanel pan3 = new JPanel();
-		pan1.add(buttonNewGame);
-		pan2.add(buttonLoadGame);
-		pan3.add(buttonClose);
-		split1.add(pan1);
-		split1.add(pan2);
-		split2.add(split1);
-		split2.add(pan3);
-		split1.setDividerLocation(150);
-		split1.setDividerSize(0);
-		split1.setEnabled(true);
-		split2.setDividerLocation(300);
-		split2.setDividerSize(0);
-		split2.setEnabled(true);
+		JPanel panNewButton = new JPanel();
+		JPanel panLoadGame = new JPanel();
+		JPanel panClose = new JPanel();
+		
+		panNewButton.add(buttonNewGame);
+		panLoadGame.add(buttonLoadGame);
+		panClose.add(buttonClose);
+		
+		splitVertical1.add(panNewButton);
+		splitVertical1.add(panLoadGame);
+		splitVertical2.add(splitVertical1);
+		splitVertical2.add(panClose);
+		
+		splitVertical1.setDividerLocation(150);
+		splitVertical1.setDividerSize(0);
+		splitVertical1.setEnabled(true);
+		splitVertical2.setDividerLocation(300);
+		splitVertical2.setDividerSize(0);
+		splitVertical2.setEnabled(true);
 
-		this.setContentPane(split2);
+		this.setContentPane(splitVertical2);
 
 		buttonNewGame.addActionListener(this);
 		buttonLoadGame.addActionListener(this);

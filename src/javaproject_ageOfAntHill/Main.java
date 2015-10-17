@@ -12,27 +12,12 @@ import javaproject_ageOfAntHill.map.Map;
  *         Amaglio, Adrien Arsac
  */
 public class Main {
-	/**
-	 * The "main" of the game.
-	 * 
-	 * @param args
-	 */
-	
+
 	public static void main(String[] args) {
 		InterfaceHM interfHM = new Interface();
 		Displaying disp = new Displaying(interfHM);
 		Menu menu = new Menu(disp);
-		
-		
-
 		disp.run();
-		// SwingUtilities.invokeLater(disp);
-		//map.generateSandWater(disp);
-		//map.generateTree(disp);
-		//map.generateStartingUnits(disp);
-		//map.generateIAUnits(disp);
-		// Map map = new Map();
-		// System.out.println("map :\n" + map.mapToString());
 	}
 
 }

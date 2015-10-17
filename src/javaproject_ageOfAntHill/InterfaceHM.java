@@ -10,7 +10,8 @@ import javaproject_ageOfAntHill.entity.buildable.Building;
 import javaproject_ageOfAntHill.map.Position;
 
 /**
- * Interface which controls the class "Interface" ; used by the user to do many actions.
+ * Interface which controls the class "Interface" ; used by the user to do many
+ * actions.
  * 
  * @author Maxime Augst, Joris Chalumeau, Nicolas Logut, Mathieu Berthet, Adrian
  *         Amaglio, Adrien Arsac
@@ -18,8 +19,9 @@ import javaproject_ageOfAntHill.map.Position;
  */
 public interface InterfaceHM {
 
-	public void selectUnits(LabelCustom labelUnit1, LabelCustom labelUnit2, MouseEvent e);
-	
+	public void selectUnits(LabelCustom labelUnit1, LabelCustom labelUnit2,
+			MouseEvent e);
+
 	public void selectBuilding(LabelCustom label, MouseEvent e);
 
 	public void moveUnit(LabelCustom label);

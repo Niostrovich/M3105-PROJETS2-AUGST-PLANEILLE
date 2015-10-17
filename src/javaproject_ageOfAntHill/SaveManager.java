@@ -30,7 +30,6 @@ public class SaveManager {
 	}
 
 	private void readSaves() {
-		// Reading the file
 		try {
 			BufferedReader in = new BufferedReader(
 					new FileReader(this.filename));
@@ -51,9 +50,9 @@ public class SaveManager {
 	public void writeSave() {
 		try (Writer writer = new BufferedWriter(new OutputStreamWriter(
 				new FileOutputStream(this.filename), "utf-8"))) {
-			for(Save save : this.saves)
-				writer.write(save+"\n");
-		} catch (UnsupportedEncodingException e){
+			for (Save save : this.saves)
+				writer.write(save + "\n");
+		} catch (UnsupportedEncodingException e) {
 			System.out.println("Unsupported encoding");
 			e.printStackTrace();
 		} catch (FileNotFoundException e) {
@@ -82,7 +81,7 @@ public class SaveManager {
 	}
 
 	public void addSave(Cell[][] grid) {
-		this.saves.add(new Save(""+ this.saves.size(), grid));
+		this.saves.add(new Save("" + this.saves.size(), grid));
 	}
 
 	@Override

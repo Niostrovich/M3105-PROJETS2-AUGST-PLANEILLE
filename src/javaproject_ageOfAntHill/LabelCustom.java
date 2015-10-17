@@ -23,48 +23,33 @@ public class LabelCustom extends JPanel {
 	private JLabel jlground;
 	private JLabel jlentity;
 
-	/**
-	 * @param nbLine
-	 * @param nbCol
-	 */
 	public LabelCustom(int nbLine, int nbCol) {
 
-		// sets grass as default picture
 		setLayout(new OverlayLayout(this));
 		jlground = new JLabel(new ImageIcon("./img/GRASS_SQUARE.png"));
-		// jlguard = new JLabel(new
-		// ImageIcon("./img/mobs/guardian/guardian-bd.png"));
 		jlentity = new JLabel();
 		add(jlentity, 0);
 		jlground = new JLabel(new ImageIcon("./img/tiles/GRASS_SQUARE.png"));
 		add(jlground, 1);
 	}
-	
-	/**
-	 * returns the label containing the entity's picture
-	 * @return
-	 */
+
 	public JLabel getJlentity() {
 		return jlentity;
 	}
-	
+
 	public JLabel getJlground() {
 		return jlground;
 	}
-	
-	/**
-	 * returns the Entity 
-	 * @return
-	 */
-	public Entity getLabEntity(){
+
+	public Entity getLabEntity() {
 		return this.entity;
 	}
-	
-	public void addEntityMap(Entity entity){
-		this.entity=entity;
-		switch (this.entity.getType()){
+
+	public void addEntityMap(Entity entity) {
+		this.entity = entity;
+		switch (this.entity.getType()) {
 		case "FLY":
-			
+
 			break;
 		case "GUARD":
 			jlentity.setIcon(new ImageIcon("./img/mobs/guardian/guardian.png"));
@@ -91,23 +76,25 @@ public class LabelCustom extends JPanel {
 			jlentity.setIcon(new ImageIcon("./img/mobs/worker/worker.png"));
 			break;
 		case "AHILL":
-			jlentity.setIcon(new ImageIcon("./img/buildings/ANTHILL_BUILDING.png"));
+			jlentity.setIcon(new ImageIcon(
+					"./img/buildings/ANTHILL_BUILDING.png"));
 			break;
 		case "HOUSE":
 			jlentity.setIcon(new ImageIcon("./img/buildings/HOUSE_BUILDING.png"));
 			break;
 		case "POSTG":
-			jlentity.setIcon(new ImageIcon("./img/buildings/OUTPOST_BUILDING.png"));
+			jlentity.setIcon(new ImageIcon(
+					"./img/buildings/OUTPOST_BUILDING.png"));
 			break;
 		default:
 		}
 	}
-	
-	public void rmvEntityMap(){
-		this.entity=null;
+
+	public void rmvEntityMap() {
+		this.entity = null;
 		jlentity.setIcon(null);
 	}
-	
+
 	public void switchGroundPicture(CellState color) {
 		switch (color) {
 		case SAND_SQUARE:

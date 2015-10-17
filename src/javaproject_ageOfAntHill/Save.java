@@ -11,11 +11,6 @@ public class Save {
 	private Cell[][] grid;
 	private int nbElem;
 
-	/**
-	 * 
-	 * @param string
-	 *            A save file like string
-	 */
 	public Save(String string) {
 		this.grid = new Cell[Map.getNbColumn()][Map.getNbLine()];
 		this.nbElem = 0;
@@ -23,9 +18,10 @@ public class Save {
 		this.name = string.split("#####")[0];
 		for (String line : string.split("#####")[1].split("####")) {
 			for (String elem : line.split("###")) {
-				this.grid[this.nbElem / Map.getNbColumn()][this.nbElem % Map.getNbLine()] = new Cell(
-						this.entityFromStr(elem.split("##")[0]),
-						CellState.parseCellState(elem.split("##")[1]));
+				this.grid[this.nbElem / Map.getNbColumn()][this.nbElem
+						% Map.getNbLine()] = new Cell(this.entityFromStr(elem
+						.split("##")[0]), CellState.parseCellState(elem
+						.split("##")[1]));
 			}
 		}
 	}
@@ -36,7 +32,7 @@ public class Save {
 	}
 
 	private Entity entityFromStr(String string) {
-		
+
 		return null;
 	}
 
@@ -47,16 +43,16 @@ public class Save {
 	public Cell[][] getSave() {
 		return this.grid;
 	}
-	
+
 	public String toString() {
 		String ret = this.name + "#####";
 		for (Cell[] column : this.grid) {
 			for (Cell cell : column) {
-				ret += cell.getEntity() + "##" + cell.getCellState()+"###";
+				ret += cell.getEntity() + "##" + cell.getCellState() + "###";
 			}
 			ret += "####";
 		}
-		
+
 		return ret;
 	}
 }
